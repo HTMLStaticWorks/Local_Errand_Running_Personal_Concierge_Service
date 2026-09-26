@@ -1,0 +1,23 @@
+/* Dark Mode Specific Overrides */
+[data-theme="dark"] {
+    --primary-bg: #0B1120;
+    --secondary-bg: #131E32;
+    --card-bg: #131E32;
+    --text-primary: #FFFFFF;
+    --text-secondary: #94A3B8;
+    --border-color: #1E293B;
+    --primary-accent: #10B981;
+    --primary-accent-hover: #059669;
+    --glow-color: rgba(16, 185, 129, 0.25);
+}
+
+[data-theme="dark"] .text-secondary {
+    color: #94A3B8 !important;
+    opacity: 1 !important;
+}
+
+[data-theme="dark"] .glass-card,
+[data-theme="dark"] .product-card {
+    background-color: #131E32;
+    border-color: #1E293B;
+}

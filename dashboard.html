@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard | Taskly Time Bank</title>
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Taskly Member Dashboard for offering and requesting services, tracking time credit balance, viewing exchange history, messaging other members, and managing profile skills.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans (Headings) + Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body data-theme="dark" class="bg-primary-dark">
+
+    <div class="d-flex">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar-glass p-3 d-flex flex-column justify-content-between" id="sidebar" style="width: 280px; height: 100vh; position: sticky; top: 0; border-right: 1px solid var(--border-color); background: var(--secondary-bg);">
+            <div>
+                <!-- Brand -->
+                <div class="d-flex justify-content-between align-items-center mb-4 px-2">
+                    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                        <i class="bi bi-geo-alt-fill text-primary-accent fs-3"></i>
+                        <span class="fs-4 fw-bold">Task<span class="text-primary-accent">ly</span></span>
+                    </a>
+                    <button class="btn text-secondary d-xl-none" id="sidebarClose" style="padding: 0; font-size: 1.5rem;" title="Close Navigation Menu"><i class="bi bi-x-lg"></i></button>
+                </div>
+                
+                <!-- Nav Links for Member Tasks -->
+                <ul class="nav nav-pills flex-column gap-2" id="dashboardTabs" role="tablist">
+                    <li class="nav-item">
+                        <button class="nav-link active w-100 text-start d-flex align-items-center gap-3" id="tab-overview" data-bs-toggle="pill" data-bs-target="#overview" type="button">
+                            <i class="bi bi-wallet2"></i> Time Balance & Stats
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link w-100 text-start d-flex align-items-center gap-3" id="tab-request" data-bs-toggle="pill" data-bs-target="#request-service" type="button">
+                            <i class="bi bi-plus-circle-fill"></i> Request an Errand
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link w-100 text-start d-flex align-items-center gap-3" id="tab-offer" data-bs-toggle="pill" data-bs-target="#offer-service" type="button">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> Offer a Service
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link w-100 text-start d-flex align-items-center gap-3" id="tab-history" data-bs-toggle="pill" data-bs-target="#exchange-history" type="button">
+                            <i class="bi bi-clock-history"></i> Exchange History
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link w-100 text-start d-flex align-items-center gap-3" id="tab-messages" data-bs-toggle="pill" data-bs-target="#messages-skills" type="button">
+                            <i class="bi bi-chat-dots-fill"></i> Messages & Skills
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Bottom Member Profile Card -->
+            <div class="border-top border-secondary pt-3">
+                <div class="mb-3">
+                    <a href="index.html" class="btn btn-outline-danger w-100 py-2 d-flex align-items-center justify-content-center gap-2" title="Exit to Home">
+                        <i class="bi bi-box-arrow-right"></i> Return to Home
+                    </a>
+                </div>
+                <div class="d-flex align-items-center gap-2 px-2">
+                    <img src="https://ui-avatars.com/api/?name=Sarah+Jenkins&background=0D9488&color=fff" class="rounded-circle" width="36" alt="Member Avatar">
+                    <div class="lh-1">
+                        <small class="d-block fw-bold">Sarah Jenkins</small>
+                        <small class="text-primary-accent" style="font-size: 0.75rem;"><i class="bi bi-patch-check-fill me-1"></i>Verified Member</small>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="flex-grow-1 p-4 overflow-auto" style="height: 100vh;">
+            
+            <!-- Top Bar -->
+            <header class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-secondary dashboard-header">
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-secondary-custom d-xl-none" id="sidebarToggle"><i class="bi bi-list fs-4"></i></button>
+                    <div>
+                        <h3 class="fw-bold mb-0">Welcome, Sarah!</h3>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <button id="rtlToggle" class="btn btn-secondary-custom btn-sm fw-bold px-3" style="height: 38px;" title="Toggle RTL">RTL</button>
+                    <button id="themeToggle" class="btn btn-secondary-custom btn-sm" style="width: 38px; height: 38px;" title="Toggle Theme"><i class="bi bi-sun"></i></button>
+                </div>
+            </header>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="dashboardTabContent">
+                
+                <!-- 1. Overview & Time Credit Balance Panel -->
+                <div class="tab-pane fade show active" id="overview" role="tabpanel">
+                    <!-- Stat Cards Row -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="glass-card p-3 d-flex align-items-center gap-3">
+                                <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-3"><i class="bi bi-hourglass-split"></i></div>
+                                <div>
+                                    <small class="text-secondary d-block">Time Credit Balance</small>
+                                    <h4 class="fw-bold mb-0 text-primary-accent">14.5 Hours</h4>
+                                    <small class="text-success" style="font-size: 0.75rem;"><i class="bi bi-arrow-up-right me-1"></i>+3.0 hrs this week</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="glass-card p-3 d-flex align-items-center gap-3">
+                                <div class="badge bg-primary-dark p-3 rounded text-warning border border-secondary fs-3"><i class="bi bi-hand-thumbs-up"></i></div>
+                                <div>
+                                    <small class="text-secondary d-block">Hours Given to Neighbors</small>
+                                    <h4 class="fw-bold mb-0">38.0 Hours</h4>
+                                    <small class="text-success" style="font-size: 0.75rem;"><i class="bi bi-check2-circle me-1"></i>18 errands completed</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="glass-card p-3 d-flex align-items-center gap-3">
+                                <div class="badge bg-primary-dark p-3 rounded text-success border border-secondary fs-3"><i class="bi bi-bag-heart"></i></div>
+                                <div>
+                                    <small class="text-secondary d-block">Hours Received</small>
+                                    <h4 class="fw-bold mb-0">23.5 Hours</h4>
+                                    <small class="text-secondary" style="font-size: 0.75rem;">12 errands received</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="glass-card p-3 d-flex align-items-center gap-3">
+                                <div class="badge bg-primary-dark p-3 rounded text-info border border-secondary fs-3"><i class="bi bi-patch-check"></i></div>
+                                <div>
+                                    <small class="text-secondary d-block">Community Trust Score</small>
+                                    <h4 class="fw-bold mb-0">5.0 / 5.0</h4>
+                                    <small class="text-primary-accent" style="font-size: 0.75rem;">Top Contributor</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts Row -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-5">
+                            <div class="glass-card p-4 h-100">
+                                <h5 class="fw-bold mb-3"><i class="bi bi-pie-chart text-primary-accent me-2"></i>Errands by Category</h5>
+                                <div style="height: 260px; position: relative;">
+                                    <canvas id="vulnChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="glass-card p-4 h-100">
+                                <h5 class="fw-bold mb-3"><i class="bi bi-bar-chart-line text-primary-accent me-2"></i>Monthly Time Credit Exchange History</h5>
+                                <div style="height: 260px; position: relative;">
+                                    <canvas id="gasChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Request an Errand Panel -->
+                <div class="tab-pane fade" id="request-service" role="tabpanel">
+                    <div class="glass-card p-4 mx-auto" style="max-width: 800px;">
+                        <h4 class="fw-bold mb-2"><i class="bi bi-plus-circle text-primary-accent me-2"></i>Request an Errand or Concierge Help</h4>
+                        <p class="text-secondary small mb-4">Post a task you need assistance with. Time credits will be transferred to your helper upon task completion.</p>
+                        
+                        <form onsubmit="event.preventDefault(); alert('Your errand request has been posted to nearby neighbors! You will be notified when someone accepts.');">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">ERRAND CATEGORY</label>
+                                    <select class="form-select form-control-glass">
+                                        <option>Grocery & Pharmacy Pickup (1.0 Credit)</option>
+                                        <option>Senior Ride & Appointment Escort (1.5 Credits)</option>
+                                        <option>Home Organization & Sorting (2.0 Credits)</option>
+                                        <option>Dog Walking & Pet Care (1.0 Credit)</option>
+                                        <option>Minor Handyman & Garden Task (1.5 Credits)</option>
+                                        <option>Tech & Smartphone Support (1.0 Credit)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">OFFERED TIME CREDITS</label>
+                                    <input type="number" class="form-control form-control-glass" value="1.0" step="0.5" min="0.5">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">PREFERRED DATE & TIME</label>
+                                    <input type="text" class="form-control form-control-glass" placeholder="e.g. Tomorrow at 2:00 PM" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">NEIGHBORHOOD / LOCATION</label>
+                                    <input type="text" class="form-control form-control-glass" placeholder="e.g. Oakridge District" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-secondary small fw-bold">ERRAND TITLE & BRIEF SUMMARY</label>
+                                    <input type="text" class="form-control form-control-glass" placeholder="e.g. Pick up weekly grocery box from Green Grocer on 4th St" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-secondary small fw-bold">SPECIAL INSTRUCTIONS / LIST</label>
+                                    <textarea class="form-control form-control-glass" rows="4" placeholder="Detail any specific items, gate codes, or preferences..."></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary-orange w-100 py-3 fw-bold"><i class="bi bi-send-check me-2"></i>Post Errand to Community Board</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 3. Offer a Service / Skill Panel -->
+                <div class="tab-pane fade" id="offer-service" role="tabpanel">
+                    <div class="glass-card p-4 mx-auto" style="max-width: 800px;">
+                        <h4 class="fw-bold mb-2"><i class="bi bi-hand-thumbs-up text-primary-accent me-2"></i>Offer Your Errand Skills to Neighbors</h4>
+                        <p class="text-secondary small mb-4">List skills or assistance you can provide to earn time credits for your personal balance.</p>
+                        
+                        <form onsubmit="event.preventDefault(); alert('Your skill offer has been published! Neighbors in your district can now request your help.');">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">SKILL / SERVICE TYPE</label>
+                                    <select class="form-select form-control-glass">
+                                        <option>Grocery & Pharmacy Deliveries</option>
+                                        <option>Senior Mobility & Doctor Rides</option>
+                                        <option>House Decluttering & Organizing</option>
+                                        <option>Pet Sitting & Dog Walking</option>
+                                        <option>Gardening & Lawn Weeding</option>
+                                        <option>Tech & Computer Troubleshooting</option>
+                                        <option>Home Cooking / Meal Prep</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">YOUR WEEKLY AVAILABILITY</label>
+                                    <input type="text" class="form-control form-control-glass" placeholder="e.g. Weekday mornings (8am - 12pm)" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">SERVICE RADIUS (MILES)</label>
+                                    <input type="number" class="form-control form-control-glass" value="5" min="1" max="25">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">EXPERIENCE LEVEL</label>
+                                    <select class="form-select form-control-glass">
+                                        <option>Experienced / Highly Skilled</option>
+                                        <option>Enthusiastic Neighbor Volunteer</option>
+                                        <option>Professional Background</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-secondary small fw-bold">SKILL DESCRIPTION & ABOUT YOU</label>
+                                    <textarea class="form-control form-control-glass" rows="4" placeholder="Describe your experience and how you love helping neighbors..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary-orange w-100 py-3 fw-bold"><i class="bi bi-check-circle me-2"></i>Publish Service to Directory</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 4. Exchange History Panel -->
+                <div class="tab-pane fade" id="exchange-history" role="tabpanel">
+                    <div class="glass-card p-4">
+                        <h4 class="fw-bold mb-3"><i class="bi bi-clock-history text-primary-accent me-2"></i>Errand Exchange Ledger</h4>
+                        <div class="table-responsive">
+                            <table class="table table-theme table-hover bg-transparent align-middle mb-0">
+                                <thead>
+                                    <tr class="text-secondary border-secondary">
+                                        <th>Exchange ID</th>
+                                        <th>Neighbor</th>
+                                        <th>Errand Service</th>
+                                        <th>Time Credits</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-secondary">
+                                        <td class="font-monospace text-primary-accent">#EX-9481</td>
+                                        <td>Clara Dupont</td>
+                                        <td>Weekly Grocery & Pharmacy Pickup</td>
+                                        <td class="text-success fw-bold">+1.5 Credits</td>
+                                        <td>Yesterday</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                    </tr>
+                                    <tr class="border-secondary">
+                                        <td class="font-monospace text-primary-accent">#EX-9475</td>
+                                        <td>Arthur Davies</td>
+                                        <td>Doctor Appointment Ride & Escort</td>
+                                        <td class="text-success fw-bold">+2.0 Credits</td>
+                                        <td>3 Days Ago</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                    </tr>
+                                    <tr class="border-secondary">
+                                        <td class="font-monospace text-primary-accent">#EX-9462</td>
+                                        <td>Marcus Vance</td>
+                                        <td>Garage Organizing & Tool Sorting</td>
+                                        <td class="text-danger fw-bold">-2.0 Credits</td>
+                                        <td>Last Week</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                    </tr>
+                                    <tr class="border-secondary">
+                                        <td class="font-monospace text-primary-accent">#EX-9490</td>
+                                        <td>Elena Rostova</td>
+                                        <td>Midday Dog Walk & Pet Sitting</td>
+                                        <td class="text-warning fw-bold">1.0 Credit (Pending)</td>
+                                        <td>Today, 4:00 PM</td>
+                                        <td><span class="badge bg-warning text-dark">Scheduled</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Messages & Profile Skills Panel -->
+                <div class="tab-pane fade" id="messages-skills" role="tabpanel">
+                    <div class="row g-4">
+                        <!-- Left: Messages -->
+                        <div class="col-lg-6">
+                            <div class="glass-card p-4 h-100">
+                                <h4 class="fw-bold mb-3"><i class="bi bi-chat-dots text-primary-accent me-2"></i>Neighbor Messages</h4>
+                                
+                                <div class="d-flex flex-column gap-3 mb-4" style="max-height: 280px; overflow-y: auto;">
+                                    <div class="p-3 bg-primary-dark rounded border border-secondary">
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <strong class="text-primary-accent">Clara Dupont</strong>
+                                            <small class="text-secondary">10:30 AM</small>
+                                        </div>
+                                        <p class="small text-secondary mb-0">"Thank you so much for the organic apples and bread Sarah! I've approved your 1.5 time credit."</p>
+                                    </div>
+                                    <div class="p-3 bg-primary-dark rounded border border-secondary">
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <strong class="text-primary-accent">Elena Rostova</strong>
+                                            <small class="text-secondary">Yesterday</small>
+                                        </div>
+                                        <p class="small text-secondary mb-0">"Hi Sarah! Looking forward to walking Toby today around 4 PM. The leash is on the porch hook."</p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex gap-2">
+                                    <input type="text" class="form-control form-control-glass" placeholder="Type a message to neighbor...">
+                                    <button class="btn btn-primary-orange" onclick="alert('Message sent to neighbor!');"><i class="bi bi-send-fill"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Manage Profile Skills -->
+                        <div class="col-lg-6">
+                            <div class="glass-card p-4 h-100">
+                                <h4 class="fw-bold mb-3"><i class="bi bi-person-gear text-primary-accent me-2"></i>Your Profile Skills</h4>
+                                
+                                <div class="d-flex flex-column gap-3 mb-4">
+                                    <div class="p-3 bg-primary-dark rounded border border-secondary d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Grocery & Pharmacy Runs</h6>
+                                            <small class="text-secondary">Active • 1.0 Credit / hr</small>
+                                        </div>
+                                        <span class="badge bg-success">Available</span>
+                                    </div>
+
+                                    <div class="p-3 bg-primary-dark rounded border border-secondary d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Smartphone & Laptop Tech Support</h6>
+                                            <small class="text-secondary">Active • 1.0 Credit / hr</small>
+                                        </div>
+                                        <span class="badge bg-success">Available</span>
+                                    </div>
+
+                                    <div class="p-3 bg-primary-dark rounded border border-secondary d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Plant Care & Garden Weeding</h6>
+                                            <small class="text-secondary">Weekends Only • 1.5 Credits / hr</small>
+                                        </div>
+                                        <span class="badge bg-secondary">Paused</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-secondary-custom w-100 py-2" onclick="alert('Skill management modal opened. Add or edit your skills anytime!');"><i class="bi bi-plus-lg me-1"></i> Add New Skill to Profile</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

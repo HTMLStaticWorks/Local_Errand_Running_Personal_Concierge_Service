@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Skills & Errand Services | Taskly</title>
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Browse local member skills, grocery errand runners, senior assistance, pet care, and personal concierge services available on the Taskly time bank network.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans (Headings) + Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body data-theme="dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-glass">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>Task<span class="text-primary-accent">ly</span></span>
+            </a>
+            
+            <button class="navbar-toggler border-0 shadow-none text-body ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Browse Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Member Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Time Banking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+                    <a href="dashboard.html" class="btn btn-secondary-custom d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Member Dashboard"><i class="bi bi-grid-1x2"></i></a>
+                    <a href="#" id="rtlToggle" class="btn btn-secondary-custom d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; font-size: 0.8rem;" title="Toggle RTL">RTL</a>
+                    <a href="#" id="themeToggle" class="btn btn-secondary-custom d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Toggle Theme"><i class="bi bi-sun"></i></a>
+                    <a href="login.html" class="btn btn-primary-orange fw-semibold ms-2">Member Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION: BROWSE SKILLS & SERVICES -->
+    <section class="hero-service-orbit">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 fade-up">
+                    <div class="eyebrow-label">MEMBER SKILLS & ERRAND DIRECTORY</div>
+                    <h1 class="display-3 mb-4">
+                        Discover What Your<br><span class="text-primary-accent">Neighbors Can Do For You.</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        From grocery pickup and prescription runs to senior mobility, home decluttering, and pet care—exchange services using community time credits.
+                    </p>
+                    <a href="#tech-matrix" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold">View Service Directory <i class="bi bi-arrow-down ms-1"></i></a>
+                </div>
+
+                <div class="col-lg-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-3 position-relative">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded border border-secondary w-100" style="max-height: 360px; object-fit: cover;" alt="Personal Concierge and Errand Running">
+                        <div class="position-absolute bottom-0 start-0 m-4 p-3 bg-primary-dark rounded border border-secondary shadow d-flex align-items-center gap-3">
+                            <i class="bi bi-shield-check text-primary-accent fs-3"></i>
+                            <div>
+                                <h6 class="mb-0">100% Background-Vetted Members</h6>
+                                <small class="text-secondary">Community rated • Equal 1:1 time credit parity</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIQUE SECTION 1 (SERVICES): SERVICE MATRIX & CREDIT RATES -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary" id="tech-matrix">
+        <div class="container py-5">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">TIME BANK SERVICE DIRECTORY</span>
+                <h2 class="display-6 mt-1">Available Errand Categories & Time Credits</h2>
+            </div>
+
+            <div class="table-responsive fade-up">
+                <table class="table table-dark table-hover border border-secondary rounded align-middle overflow-hidden">
+                    <thead>
+                        <tr class="bg-primary-dark text-primary-accent">
+                            <th class="py-3 px-4">Service Category</th>
+                            <th class="py-3 px-4">Typical Errand Tasks</th>
+                            <th class="py-3 px-4">Service Availability</th>
+                            <th class="py-3 px-4">Member Safety Check</th>
+                            <th class="py-3 px-4">Time Bank Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-secondary small">
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-basket-fill text-primary-accent me-2"></i> Grocery & Pharmacy Pickup</td>
+                            <td class="py-3 px-4">Supermarket runs, prescription collection, specialty markets</td>
+                            <td class="py-3 px-4"><span class="badge bg-success">Daily (Same-Day)</span></td>
+                            <td class="py-3 px-4">ID Verified + Receipt Log</td>
+                            <td class="py-3 px-4 text-primary-accent fw-bold">1.0 Credit / hr</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-heart-pulse-fill text-primary-accent me-2"></i> Senior Rides & Companionship</td>
+                            <td class="py-3 px-4">Doctor appointments, physical therapy escorts, social visits</td>
+                            <td class="py-3 px-4"><span class="badge bg-success">7 Days a Week</span></td>
+                            <td class="py-3 px-4">Driver Verified + Safe Escort</td>
+                            <td class="py-3 px-4 text-primary-accent fw-bold">1.5 Credits / hr</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-house-check-fill text-primary-accent me-2"></i> Home Organization & Tasks</td>
+                            <td class="py-3 px-4">Pantry organizing, closet sorting, donation drop-offs</td>
+                            <td class="py-3 px-4"><span class="badge bg-primary">Weekdays & Weekends</span></td>
+                            <td class="py-3 px-4">Community Reference Checked</td>
+                            <td class="py-3 px-4 text-primary-accent fw-bold">2.0 Credits / task</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-emoji-smile-fill text-primary-accent me-2"></i> Pet Care & Midday Walks</td>
+                            <td class="py-3 px-4">Dog walking, cat sitting, vet drop-offs, plant watering</td>
+                            <td class="py-3 px-4"><span class="badge bg-success">Flexible Schedule</span></td>
+                            <td class="py-3 px-4">Pet-Lover Verified</td>
+                            <td class="py-3 px-4 text-primary-accent fw-bold">1.0 Credit / hr</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-laptop text-primary-accent me-2"></i> Tech Help & Digital Concierge</td>
+                            <td class="py-3 px-4">Smartphone setup, printer troubleshooting, video calling support</td>
+                            <td class="py-3 px-4"><span class="badge bg-primary">Remote & In-Person</span></td>
+                            <td class="py-3 px-4">Tech-Skill Verified</td>
+                            <td class="py-3 px-4 text-primary-accent fw-bold">1.0 Credit / hr</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIQUE SECTION 2 (SERVICES): POPULAR CONCIERGE SPECIALTIES -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 fade-up">
+                    <span class="eyebrow-label">PERSONALIZED CARE</span>
+                    <h2 class="display-6 mt-1 mb-3">Tailored Personal Concierge Packages</h2>
+                    <p class="text-secondary mb-4">Need ongoing support for recovering from surgery, caring for aging parents, or managing a chaotic family schedule? Discover our cooperative concierge specialties.</p>
+                    <a href="contact.html" class="btn btn-primary-orange py-3 px-4 fw-bold">Request Custom Assistance</a>
+                </div>
+
+                <div class="col-lg-7 fade-up" style="transition-delay: 0.1s;">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 h-100">
+                                <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-3 mb-3"><i class="bi bi-bandaid"></i></div>
+                                <h5>Post-Op & Recovery Care</h5>
+                                <p class="text-secondary small mb-0">Meal delivery, prescription pickups, and light home upkeep while recovering at home.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 h-100">
+                                <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-3 mb-3"><i class="bi bi-calendar2-check"></i></div>
+                                <h5>Weekly Errand Buddy</h5>
+                                <p class="text-secondary small mb-0">Scheduled weekly grocery runs and dry cleaning drop-offs with the same trusted neighbor.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 h-100">
+                                <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-3 mb-3"><i class="bi bi-box2-heart"></i></div>
+                                <h5>Move-In & De-clutter Help</h5>
+                                <p class="text-secondary small mb-0">Box un-packing, furniture assembly assistance, and goodwill haul drop-offs.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 h-100">
+                                <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-3 mb-3"><i class="bi bi-chat-square-heart"></i></div>
+                                <h5>Senior Social Calls</h5>
+                                <p class="text-secondary small mb-0">Warm weekly check-ins, walks in the neighborhood park, and friendly conversation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIQUE SECTION 3 (SERVICES): TIME BANKING RULES & GUIDELINES -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary">
+        <div class="container py-5">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">EXCHANGE ETHICS</span>
+                <h2 class="display-6 mt-1">The 4 Golden Rules of Taskly Exchange</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 fade-up">
+                    <div class="glass-card p-4 text-center h-100">
+                        <span class="badge bg-secondary text-primary-accent mb-3">RULE 1</span>
+                        <h4>Equality of Hours</h4>
+                        <p class="text-secondary small mb-3">One hour of assistance always equals one time credit, no exceptions.</p>
+                        <h5 class="text-primary-accent mb-0">Fair & Dignified</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 text-center h-100">
+                        <span class="badge bg-secondary text-primary-accent mb-3">RULE 2</span>
+                        <h4>Prompt Punctuality</h4>
+                        <p class="text-secondary small mb-3">Communicate arrival times clearly and notify in advance of any schedule changes.</p>
+                        <h5 class="text-primary-accent mb-0">Reliable Care</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 text-center h-100">
+                        <span class="badge bg-secondary text-primary-accent mb-3">RULE 3</span>
+                        <h4>Respect & Privacy</h4>
+                        <p class="text-secondary small mb-3">Honor neighbor privacy and personal boundaries during every in-home task.</p>
+                        <h5 class="text-primary-accent mb-0">Total Discretion</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.3s;">
+                    <div class="glass-card p-4 text-center h-100">
+                        <span class="badge bg-secondary text-primary-accent mb-3">RULE 4</span>
+                        <h4>Reciprocity</h4>
+                        <p class="text-secondary small mb-3">Both offering help and asking for help keep the time bank vibrant and healthy.</p>
+                        <h5 class="text-primary-accent mb-0">Mutual Support</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIQUE SECTION 4 (SERVICES): DIRECT ERRAND POSTING PROMPT -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="glass-card p-4 p-md-5 text-center fade-up">
+                <span class="eyebrow-label">READY TO POST AN ERRAND?</span>
+                <h3 class="mb-3">Have an Errand or Task You Need Done This Week?</h3>
+                <p class="text-secondary mx-auto mb-4" style="max-width: 620px;">Join our member directory to post your errand request, connect with available local helpers, and start earning time credits.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="dashboard.html" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold"><i class="bi bi-plus-circle me-1"></i> Post an Errand Request</a>
+                    <a href="register.html" class="btn btn-secondary-custom btn-lg px-4 py-3 fw-bold">Sign Up as Member</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-secondary-dark border-top border-secondary">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand mb-4 d-inline-flex" href="index.html">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Task<span class="text-primary-accent">ly</span></span>
+                    </a>
+                    <p class="text-secondary mb-4">Taskly is a cooperative, community-driven time banking network and personal concierge platform empowering neighbors to exchange errand running, senior assistance, home organizing, and specialized skills.</p>
+                    <!-- Social Media Icons -->
+                    <div class="d-flex align-items-center gap-2 mt-3">
+                        <a href="https://instagram.com" target="_blank" class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Errand Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services.html" class="footer-link">Grocery & Pharmacy</a></li>
+                        <li class="mb-2"><a href="services.html" class="footer-link">Senior Rides & Care</a></li>
+                        <li class="mb-2"><a href="services.html" class="footer-link">Home Organizing</a></li>
+                        <li class="mb-2"><a href="services.html" class="footer-link">Pet Sitting & Walks</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Time Bank Hub</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="dashboard.html" class="footer-link">Member Dashboard</a></li>
+                        <li class="mb-2"><a href="home2.html" class="footer-link">How It Works</a></li>
+                        <li class="mb-2"><a href="register.html" class="footer-link">Join Time Bank</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="footer-link">Time Bank System</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="mb-4">Community Bulletin</h5>
+                    <form class="d-flex gap-2 mb-3">
+                        <input type="email" class="form-control form-control-glass" placeholder="Enter your email">
+                        <button class="btn btn-primary-orange" type="button">Subscribe</button>
+                    </form>
+                    <small class="text-secondary">Receive weekly local errand alerts and neighbor volunteer opportunities.</small>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center">
+                <p class="text-secondary small mb-0">&copy; 2026 Taskly Cooperative & Personal Concierge Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

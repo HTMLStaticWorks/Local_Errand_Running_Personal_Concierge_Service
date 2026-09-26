@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Banking System & Plans | Taskly</title>
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Discover how Taskly time banking operates with zero mandatory fees. 1 hour of neighborly help equals 1 time credit.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans (Headings) + Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body data-theme="dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-glass">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>Task<span class="text-primary-accent">ly</span></span>
+            </a>
+            
+            <button class="navbar-toggler border-0 shadow-none text-body ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Browse Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Member Stories</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pricing.html">Time Banking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+                    <a href="dashboard.html" class="btn btn-secondary-custom d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Member Dashboard"><i class="bi bi-grid-1x2"></i></a>
+                    <a href="#" id="rtlToggle" class="btn btn-secondary-custom d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; font-size: 0.8rem;" title="Toggle RTL">RTL</a>
+                    <a href="#" id="themeToggle" class="btn btn-secondary-custom d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Toggle Theme"><i class="bi bi-sun"></i></a>
+                    <a href="login.html" class="btn btn-primary-orange fw-semibold ms-2">Member Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION: TIME BANKING SYSTEM -->
+    <section class="hero-pricing-stacked">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 fade-up">
+                    <div class="eyebrow-label">COMMUNITY TIME BANK ECONOMY</div>
+                    <h1 class="display-3 mb-4">
+                        Spend Hours.<br><span class="text-primary-accent">Not Dollars.</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        Taskly operates on 100% reciprocal time credits. Every hour you contribute assisting a neighbor is deposited into your wallet to request errands whenever you need.
+                    </p>
+                    <div class="d-flex align-items-center gap-3 mb-4 justify-content-center justify-content-lg-start">
+                        <a href="#matrix" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold">View Membership Tiers <i class="bi bi-arrow-down ms-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-3 position-relative">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded border border-secondary w-100 mb-3" style="max-height: 220px; object-fit: cover;" alt="Time banking reciprocity">
+                        <div class="p-3 bg-primary-dark rounded border border-secondary">
+                            <h5 class="mb-3"><i class="bi bi-hourglass-split text-primary-accent me-2"></i> Equal Hour Parity Guarantee</h5>
+                            <div class="row g-2 text-secondary small">
+                                <div class="col-6"><span>1 Hr Grocery Run:</span> <strong class="text-primary-accent">1.0 Credit</strong></div>
+                                <div class="col-6"><span>1 Hr Senior Ride:</span> <strong class="text-primary-accent">1.0 Credit</strong></div>
+                                <div class="col-6"><span>1 Hr Dog Walking:</span> <strong class="text-primary-accent">1.0 Credit</strong></div>
+                                <div class="col-6"><span>1 Hr Home Organizing:</span> <strong class="text-primary-accent">1.0 Credit</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIQUE SECTION 1 (PRICING): INTERACTIVE TIME BANK CALCULATOR -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary">
+        <div class="container py-5">
+            <div class="glass-card p-4 p-md-5">
+                <div class="text-center mb-4 fade-up">
+                    <span class="eyebrow-label">RECIPROCAL EXCHANGE CALCULATOR</span>
+                    <h2 class="display-6 mt-1">Estimate Your Monthly Errand Freedom</h2>
+                </div>
+
+                <div class="row align-items-center g-4 fade-up">
+                    <div class="col-md-6">
+                        <label class="form-label text-secondary small fw-bold">HOURS YOU CAN VOLUNTEER PER MONTH</label>
+                        <input type="number" class="form-control form-control-glass mb-4" id="volunteerHoursInput" value="4" min="1" max="50" oninput="updateTimeBankCalc();">
+
+                        <label class="form-label text-secondary small fw-bold">COMMERCIAL CONCIERGE EQUIVALENT VALUE</label>
+                        <input type="text" class="form-control form-control-glass mb-4" value="$35.00 / Hour Standard Market Rate" disabled>
+                    </div>
+
+                    <div class="col-md-6 text-center">
+                        <div class="p-4 bg-primary-dark rounded border border-secondary">
+                            <small class="text-secondary d-block mb-1">TIME CREDITS EARNED PER MONTH</small>
+                            <h1 class="display-3 text-primary-accent fw-bold mb-2" id="calcCreditsResult">4.0 Credits</h1>
+                            <small class="text-success" id="calcDollarsSaved"><i class="bi bi-wallet-fill me-1"></i> Equal to $140.00 in commercial concierge value</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIQUE SECTION 2 (PRICING): MEMBERSHIP COMPARISON TABLE -->
+    <section class="py-5" id="matrix">
+        <div class="container py-5">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">MEMBERSHIP TIERS</span>
+                <h2 class="display-6 mt-1">Community Member vs. Cooperative Sustainer</h2>
+            </div>
+
+            <div class="table-responsive fade-up">
+                <table class="table table-dark table-hover border border-secondary rounded align-middle">
+                    <thead>
+                        <tr class="bg-primary-dark">
+                            <th class="py-3 px-4 text-white">Cooperative Benefits</th>
+                            <th class="py-3 px-4 text-center text-white">Community Member ($0 / Free Forever)</th>
+                            <th class="py-3 px-4 text-center text-primary-accent">Cooperative Sustainer (Optional $5/mo Donation)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-secondary small">
+                        <tr>
+                            <td class="py-3 px-4 text-white">Earn & Spend Time Credits</td>
+                            <td class="py-3 px-4 text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i> Unlimited</td>
+                            <td class="py-3 px-4 text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i> Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white">Member ID Background Check</td>
+                            <td class="py-3 px-4 text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i> Included</td>
+                            <td class="py-3 px-4 text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i> Included</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white">Welcome Time Credit Bonus</td>
+                            <td class="py-3 px-4 text-center">2.0 Bonus Hours on Join</td>
+                            <td class="py-3 px-4 text-center text-primary-accent fw-bold">5.0 Bonus Hours on Join</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white">Priority Errand Dispatch Routing</td>
+                            <td class="py-3 px-4 text-center">Standard Routing</td>
+                            <td class="py-3 px-4 text-center text-primary-accent fw-bold">Priority Volunteer Alerts</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white">Cooperative Voting Rights</td>
+                            <td class="py-3 px-4 text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i> 1 Member 1 Vote</td>
+                            <td class="py-3 px-4 text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i> 1 Member 1 Vote</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIQUE SECTION 3 (PRICING): ETHICAL TIME BANKING SECURITY -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary">
+        <div class="container py-5">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">COOPERATIVE INTEGRITY</span>
+                <h2 class="display-6 mt-1">Guaranteed Fairness & Ledger Transparency</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 fade-up">
+                    <div class="glass-card p-4 text-center h-100">
+                        <div class="text-primary-accent fs-1 mb-3"><i class="bi bi-journal-check"></i></div>
+                        <h4>Public Mutual Ledger</h4>
+                        <p class="text-secondary small mb-0">All time credit transfers are logged transparently on our decentralized member ledger to ensure trust.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 text-center h-100">
+                        <div class="text-primary-accent fs-1 mb-3"><i class="bi bi-shield-lock-fill"></i></div>
+                        <h4>No Expiration Dates</h4>
+                        <p class="text-secondary small mb-0">Your earned time credits never expire. Save hours today and redeem them months later when you need help.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 text-center h-100">
+                        <div class="text-primary-accent fs-1 mb-3"><i class="bi bi-heart-fill"></i></div>
+                        <h4>Community Time Pool</h4>
+                        <p class="text-secondary small mb-0">Members can donate surplus time credits to our elderly & disabled assistance fund for neighbors in need.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-secondary-dark border-top border-secondary">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand mb-4 d-inline-flex" href="index.html">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Task<span class="text-primary-accent">ly</span></span>
+                    </a>
+                    <p class="text-secondary mb-4">Taskly is a cooperative, community-driven time banking network and personal concierge platform empowering neighbors to exchange errand running, senior assistance, home organizing, and specialized skills.</p>
+                    <!-- Social Media Icons -->
+                    <div class="d-flex align-items-center gap-2 mt-3">
+                        <a href="https://instagram.com" target="_blank" class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Errand Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services.html" class="footer-link">Grocery & Pharmacy</a></li>
+                        <li class="mb-2"><a href="services.html" class="footer-link">Senior Rides & Care</a></li>
+                        <li class="mb-2"><a href="services.html" class="footer-link">Home Organizing</a></li>
+                        <li class="mb-2"><a href="services.html" class="footer-link">Pet Sitting & Walks</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Time Bank Hub</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="dashboard.html" class="footer-link">Member Dashboard</a></li>
+                        <li class="mb-2"><a href="home2.html" class="footer-link">How It Works</a></li>
+                        <li class="mb-2"><a href="register.html" class="footer-link">Join Time Bank</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="footer-link">Time Bank System</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="mb-4">Community Bulletin</h5>
+                    <form class="d-flex gap-2 mb-3">
+                        <input type="email" class="form-control form-control-glass" placeholder="Enter your email">
+                        <button class="btn btn-primary-orange" type="button">Subscribe</button>
+                    </form>
+                    <small class="text-secondary">Receive weekly local errand alerts and neighbor volunteer opportunities.</small>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center">
+                <p class="text-secondary small mb-0">&copy; 2026 Taskly Cooperative & Personal Concierge Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateTimeBankCalc() {
+            var hours = parseFloat(document.getElementById('volunteerHoursInput').value) || 0;
+            document.getElementById('calcCreditsResult').innerText = hours.toFixed(1) + ' Credits';
+            document.getElementById('calcDollarsSaved').innerHTML = '<i class="bi bi-wallet-fill me-1"></i> Equal to $' + (hours * 35).toFixed(2) + ' in commercial concierge value';
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
