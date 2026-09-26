@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 badge: "Step 2: Connect With Verified Local Neighbor Concierge"
             },
             {
-                img: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80",
+                img: "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=800&q=80",
                 badge: "Step 3: Errand Completed Safely & With Care"
             },
             {
@@ -193,6 +193,52 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 200);
             });
         });
+    }
+
+    // --- Member Stories / Blog Topic Filtering ---
+    const topicBtns = document.querySelectorAll('.blog-category-chips button');
+    if (topicBtns.length > 0) {
+        topicBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+
+                // Update active state of buttons
+                topicBtns.forEach(b => {
+                    b.classList.remove('btn-primary-orange');
+                    b.classList.add('btn-secondary-custom');
+                });
+                btn.classList.remove('btn-secondary-custom');
+                btn.classList.add('btn-primary-orange');
+
+                // Filter story cards and sections
+                const allCategorized = document.querySelectorAll('[data-category]');
+                allCategorized.forEach(el => {
+                    const cat = el.getAttribute('data-category');
+                    if (filter === 'all' || cat === filter || (cat && cat.includes(filter))) {
+                        el.style.display = '';
+                        el.classList.remove('d-none');
+                        el.style.opacity = '0';
+                        el.style.transform = 'translateY(10px)';
+                        setTimeout(() => {
+                            el.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                            el.style.opacity = '1';
+                            el.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        el.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // "View All Articles" button in section header
+        const viewAllBtn = document.getElementById('viewAllArticlesBtn');
+        if (viewAllBtn) {
+            viewAllBtn.addEventListener('click', (e) => {
+                const allBtn = document.querySelector('.blog-category-chips button[data-filter="all"]');
+                if (allBtn) allBtn.click();
+            });
+        }
     }
 
     // --- Initialize Charts if Chart.js is present ---
