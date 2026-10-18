@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse Skills & Errand Services | Taskly</title>
+    <title>Services & Personal Concierge | Taskly</title>
     
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="description" content="Browse local member skills, grocery errand runners, senior assistance, pet care, and personal concierge services available on the Taskly time bank network.">
@@ -42,16 +42,16 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="services.html">Browse Skills</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Member Stories</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Time Banking</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
                     <a href="dashboard.html" class="btn btn-secondary-custom d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Member Dashboard"><i class="bi bi-grid-1x2"></i></a>
-                    <a href="#" id="rtlToggle" class="btn btn-secondary-custom d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; font-size: 0.8rem;" title="Toggle RTL">RTL</a>
+                    <a href="#" id="rtlToggle" class="btn btn-secondary-custom d-flex align-items-center justify-content-center fw-bold" style="height: 40px; padding: 0 14px; font-size: 0.85rem;" title="Toggle RTL">RTL</a>
                     <a href="#" id="themeToggle" class="btn btn-secondary-custom d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Toggle Theme"><i class="bi bi-sun"></i></a>
-                    <a href="login.html" class="btn btn-primary-orange fw-semibold ms-2">Member Login</a>
+                    <a href="login.html" class="btn btn-primary-orange fw-semibold ms-2" style="height: 40px; padding: 0 1.5rem;">Member Login</a>
                 </div>
             </div>
         </div>
@@ -62,14 +62,17 @@
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 fade-up">
-                    <div class="eyebrow-label">MEMBER SKILLS & ERRAND DIRECTORY</div>
+                    <div class="eyebrow-label">LOCAL CONCIERGE & ERRAND DIRECTORY</div>
                     <h1 class="display-3 mb-4">
                         Discover What Your<br><span class="text-primary-accent">Neighbors Can Do For You.</span>
                     </h1>
                     <p class="lead mb-4">
-                        From grocery pickup and prescription runs to senior mobility, home decluttering, and pet care—exchange services using community time credits.
+                        From grocery shopping and prescription pickups to returns, package drops, and multi-stop errands—exchange services seamlessly through our trusted community network.
                     </p>
-                    <a href="#tech-matrix" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold">View Service Directory <i class="bi bi-arrow-down ms-1"></i></a>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="#errand-services" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold">Explore All Services <i class="bi bi-arrow-down ms-1"></i></a>
+                        <a href="#service-pricing" class="btn btn-secondary-custom btn-lg px-4 py-3 fw-bold">View Pricing & Rates</a>
+                    </div>
                 </div>
 
                 <div class="col-lg-6 fade-up" style="transition-delay: 0.1s;">
@@ -88,159 +91,453 @@
         </div>
     </section>
 
-    <!-- UNIQUE SECTION 1 (SERVICES): SERVICE MATRIX & CREDIT RATES -->
-    <section class="py-5 bg-secondary-dark border-top border-secondary" id="tech-matrix">
-        <div class="container py-5">
+    <!-- SECTION 1: ERRAND RUNNING SERVICES -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary" id="errand-services">
+        <div class="container py-4">
+            <div class="row align-items-center g-5 mb-5">
+                <div class="col-lg-6 fade-up">
+                    <span class="eyebrow-label">CORE CONCIERGE CARE</span>
+                    <h2 class="display-6 mt-1 mb-3">1. Errand Running Services</h2>
+                    <p class="lead text-secondary mb-4">
+                        Reclaim your precious time with dependable personal errand support. Our verified neighborhood runners handle everyday chores, scheduled pickups, emergency runs, and time-consuming tasks with exceptional care and communication.
+                    </p>
+                    <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-4">
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-primary-accent"></i>
+                            <span><strong>Full Daily To-Do List Management:</strong> From post office queues to dry cleaners and boutique runs.</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-primary-accent"></i>
+                            <span><strong>Vetted Neighborhood Runners:</strong> Community-backed, identity-checked neighbors you can trust.</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-primary-accent"></i>
+                            <span><strong>Real-Time Updates & Receipt Logs:</strong> Direct communication and instant proof of task completion.</span>
+                        </li>
+                    </ul>
+                    <a href="dashboard.html" class="btn btn-primary-orange py-2 px-4 fw-semibold">Book an Errand Runner <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+                <div class="col-lg-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 h-100">
+                                <div class="badge bg-primary-dark p-2 rounded text-primary-accent border border-secondary fs-4 mb-2"><i class="bi bi-clock-history"></i></div>
+                                <h6 class="fw-bold">Same-Day Dispatch</h6>
+                                <p class="text-secondary small mb-0">Need urgent help? Get matched with an active neighborhood runner in under 30 minutes.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 h-100">
+                                <div class="badge bg-primary-dark p-2 rounded text-primary-accent border border-secondary fs-4 mb-2"><i class="bi bi-calendar-check"></i></div>
+                                <h6 class="fw-bold">Scheduled Routes</h6>
+                                <p class="text-secondary small mb-0">Set up recurring weekly support on fixed days with your favorite regular errand partner.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 h-100">
+                                <div class="badge bg-primary-dark p-2 rounded text-primary-accent border border-secondary fs-4 mb-2"><i class="bi bi-shield-lock"></i></div>
+                                <h6 class="fw-bold">Safety & Trust First</h6>
+                                <p class="text-secondary small mb-0">All members are identity-verified and follow strict community safety protocols.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 h-100">
+                                <div class="badge bg-primary-dark p-2 rounded text-primary-accent border border-secondary fs-4 mb-2"><i class="bi bi-chat-dots"></i></div>
+                                <h6 class="fw-bold">In-App Live Chat</h6>
+                                <p class="text-secondary small mb-0">Share item photos, shopping lists, and specific delivery instructions instantly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTIONS 2 TO 6: SPECIALIZED ERRAND OFFERINGS -->
+    <section class="py-5" id="specialized-services">
+        <div class="container py-4">
             <div class="text-center mb-5 fade-up">
-                <span class="eyebrow-label">TIME BANK SERVICE DIRECTORY</span>
-                <h2 class="display-6 mt-1">Available Errand Categories & Time Credits</h2>
+                <span class="eyebrow-label">POPULAR SERVICE CATEGORIES</span>
+                <h2 class="display-6 mt-1">Specialized Errand Running Categories</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">From daily pantry replenishments to secure legal courier runs, our members cover every specific errand need with reliability and precision.</p>
             </div>
 
+            <div class="row g-4">
+                <!-- 2. Grocery & Shopping Assistance -->
+                <div class="col-lg-4 col-md-6 fade-up">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-4"><i class="bi bi-basket-fill"></i></div>
+                            <span class="badge bg-secondary text-primary-accent">SERVICE 02</span>
+                        </div>
+                        <h4 class="mb-2">2. Grocery & Shopping Assistance</h4>
+                        <p class="text-secondary small mb-3 flex-grow-1">
+                            Complete supermarket shopping, fresh produce selection, farmers market sourcing, and specialty food store runs tailored to your exact grocery list and dietary preferences.
+                        </p>
+                        <div class="border-top border-secondary pt-3">
+                            <ul class="list-unstyled text-secondary small d-flex flex-column gap-1 mb-3">
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Custom itemized shopping lists</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Real-time substitution approval via chat</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Doorstep unpacking & pantry sorting</li>
+                            </ul>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="badge bg-primary-dark text-primary-accent border border-secondary">Rate: 1.0 Credit/hr</span>
+                                <small class="text-secondary">[Placeholder: $25.00/hr]</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Pickup & Drop-off -->
+                <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-4"><i class="bi bi-arrow-left-right"></i></div>
+                            <span class="badge bg-secondary text-primary-accent">SERVICE 03</span>
+                        </div>
+                        <h4 class="mb-2">3. Pickup & Drop-off</h4>
+                        <p class="text-secondary small mb-3 flex-grow-1">
+                            Effortless point-to-point item transport. We collect dry cleaning, bakery orders, repair items, hardware supplies, and donation goods, delivering them promptly to their destination.
+                        </p>
+                        <div class="border-top border-secondary pt-3">
+                            <ul class="list-unstyled text-secondary small d-flex flex-column gap-1 mb-3">
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Dry cleaners & tailoring drop-off/pickup</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Peer-to-peer item & tool exchanges</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Goodwill & charity donation hauling</li>
+                            </ul>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="badge bg-primary-dark text-primary-accent border border-secondary">Rate: 1.0 Credit/hr</span>
+                                <small class="text-secondary">[Placeholder: $25.00/hr]</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Returns & Exchanges -->
+                <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-4"><i class="bi bi-arrow-repeat"></i></div>
+                            <span class="badge bg-secondary text-primary-accent">SERVICE 04</span>
+                        </div>
+                        <h4 class="mb-2">4. Returns & Exchanges</h4>
+                        <p class="text-secondary small mb-3 flex-grow-1">
+                            Avoid long lines and missed return windows. Our runners process retail store refunds, size exchanges, and parcel returns at UPS, FedEx, USPS, and Amazon return drop counters.
+                        </p>
+                        <div class="border-top border-secondary pt-3">
+                            <ul class="list-unstyled text-secondary small d-flex flex-column gap-1 mb-3">
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> QR code & prepaid label drop-offs</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Mall & retail store exchanges</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Instant return receipt photo upload</li>
+                            </ul>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="badge bg-primary-dark text-primary-accent border border-secondary">Rate: 1.0 Credit/trip</span>
+                                <small class="text-secondary">[Placeholder: $20.00/trip]</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Prescription & Pharmacy Pickup -->
+                <div class="col-lg-6 col-md-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-4"><i class="bi bi-capsule"></i></div>
+                            <span class="badge bg-secondary text-primary-accent">SERVICE 05</span>
+                        </div>
+                        <h4 class="mb-2">5. Prescription & Pharmacy Pickup</h4>
+                        <p class="text-secondary small mb-3 flex-grow-1">
+                            Discreet, safe, and expedited pickup of authorized refill prescriptions, over-the-counter medical supplies, wellness essentials, and home health care gear directly to your doorstep.
+                        </p>
+                        <div class="border-top border-secondary pt-3">
+                            <ul class="list-unstyled text-secondary small d-flex flex-column gap-1 mb-3">
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Pharmacy authorization protocol support</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Tamper-evident and confidential packaging</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Urgent same-day prescription delivery</li>
+                            </ul>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="badge bg-primary-dark text-primary-accent border border-secondary">Rate: 1.0 Credit/hr</span>
+                                <small class="text-secondary">[Placeholder: $25.00/hr]</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Document & Package Delivery -->
+                <div class="col-lg-6 col-md-12 fade-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-4"><i class="bi bi-file-earmark-text-fill"></i></div>
+                            <span class="badge bg-secondary text-primary-accent">SERVICE 06</span>
+                        </div>
+                        <h4 class="mb-2">6. Document & Package Delivery</h4>
+                        <p class="text-secondary small mb-3 flex-grow-1">
+                            Time-sensitive hand-to-hand courier service for legal documents, signed paperwork, architectural prints, certified letters, and urgent packages needing fast local transport.
+                        </p>
+                        <div class="border-top border-secondary pt-3">
+                            <ul class="list-unstyled text-secondary small d-flex flex-column gap-1 mb-3">
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Real-time GPS tracking & delivery ETA</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Recipient signature verification on arrival</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Post office, notary & courier counter dispatch</li>
+                            </ul>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="badge bg-primary-dark text-primary-accent border border-secondary">Rate: 1.5 Credits/hr</span>
+                                <small class="text-secondary">[Placeholder: $35.00/hr]</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: SERVICE PRICING -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary" id="service-pricing">
+        <div class="container py-4">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">TRANSPARENT VALUE MATRIX</span>
+                <h2 class="display-6 mt-1">7. Service Pricing</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">Clear, honest rates with zero hidden fees. Exchange reciprocal community time credits or utilize our standard commercial service rates.</p>
+            </div>
+
+            <!-- Pricing Tier Cards -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 fade-up">
+                    <div class="glass-card p-4 h-100 d-flex flex-column text-center">
+                        <span class="badge bg-secondary text-primary-accent mb-3 align-self-center">TIER 1 • STANDARD</span>
+                        <h4 class="mb-1">Routine Errand Running</h4>
+                        <small class="text-secondary mb-3">Standard grocery, returns & pickup tasks</small>
+                        <div class="my-3 py-3 border-top border-bottom border-secondary">
+                            <h2 class="display-6 text-primary-accent fw-bold mb-0">1.0 Credit</h2>
+                            <small class="text-secondary d-block">per volunteer hour (1:1 parity)</small>
+                            <span class="badge border border-secondary mt-2" style="background-color: var(--secondary-bg); color: var(--text-primary); font-weight: 600;">[Placeholder: $25.00 / Hour]</span>
+                        </div>
+                        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-4 text-start flex-grow-1">
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Grocery & pantry item shopping</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Standard pickup & drop-off</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Retail returns & prepaid parcel drops</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Regular 24-hr advance booking</li>
+                        </ul>
+                        <a href="dashboard.html" class="btn btn-secondary-custom w-100 py-2 fw-semibold">Book Standard Errand</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column text-center border-primary position-relative">
+                        <div class="position-absolute top-0 start-50 translate-middle badge bg-primary-accent text-white px-3 py-1 fw-bold">MOST POPULAR</div>
+                        <span class="badge bg-secondary text-primary-accent mb-3 align-self-center">TIER 2 • PRIORITY</span>
+                        <h4 class="mb-1">Express & Multi-Stop</h4>
+                        <small class="text-secondary mb-3">Same-day runs & multi-destination routes</small>
+                        <div class="my-3 py-3 border-top border-bottom border-secondary">
+                            <h2 class="display-6 text-primary-accent fw-bold mb-0">1.5 Credits</h2>
+                            <small class="text-secondary d-block">per expedited hour</small>
+                            <span class="badge border border-secondary mt-2" style="background-color: var(--secondary-bg); color: var(--text-primary); font-weight: 600;">[Placeholder: $35.00 / Hour]</span>
+                        </div>
+                        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-4 text-start flex-grow-1">
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Expedited same-day dispatch</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Up to 3 shopping or pickup stops</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Prescription & urgent pharmacy collection</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Priority runner matching</li>
+                        </ul>
+                        <a href="dashboard.html" class="btn btn-primary-orange w-100 py-2 fw-semibold">Book Express Route</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 fade-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column text-center">
+                        <span class="badge bg-secondary text-primary-accent mb-3 align-self-center">TIER 3 • DEDICATED</span>
+                        <h4 class="mb-1">Document & Specialized</h4>
+                        <small class="text-secondary mb-3">Confidential deliveries & complex errands</small>
+                        <div class="my-3 py-3 border-top border-bottom border-secondary">
+                            <h2 class="display-6 text-primary-accent fw-bold mb-0">2.0 Credits</h2>
+                            <small class="text-secondary d-block">per specialized task</small>
+                            <span class="badge border border-secondary mt-2" style="background-color: var(--secondary-bg); color: var(--text-primary); font-weight: 600;">[Placeholder: $50.00 / Task]</span>
+                        </div>
+                        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-4 text-start flex-grow-1">
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Certified document & legal hand-offs</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Signature verification on delivery</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Large / heavy parcel transport</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Dedicated concierge coordination</li>
+                        </ul>
+                        <a href="dashboard.html" class="btn btn-secondary-custom w-100 py-2 fw-semibold">Book Specialized Task</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Rate Directory Table -->
             <div class="table-responsive fade-up">
                 <table class="table table-dark table-hover border border-secondary rounded align-middle overflow-hidden">
                     <thead>
                         <tr class="bg-primary-dark text-primary-accent">
-                            <th class="py-3 px-4">Service Category</th>
-                            <th class="py-3 px-4">Typical Errand Tasks</th>
-                            <th class="py-3 px-4">Service Availability</th>
-                            <th class="py-3 px-4">Member Safety Check</th>
+                            <th class="py-3 px-4">Service Section</th>
+                            <th class="py-3 px-4">Core Task Inclusions</th>
+                            <th class="py-3 px-4">Turnaround Time</th>
                             <th class="py-3 px-4">Time Bank Cost</th>
+                            <th class="py-3 px-4">Commercial Rate Placeholder</th>
                         </tr>
                     </thead>
                     <tbody class="text-secondary small">
                         <tr>
-                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-basket-fill text-primary-accent me-2"></i> Grocery & Pharmacy Pickup</td>
-                            <td class="py-3 px-4">Supermarket runs, prescription collection, specialty markets</td>
+                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-check2-circle text-primary-accent me-2"></i> 1. Errand Running Services</td>
+                            <td class="py-3 px-4">General to-do lists, post office, dry cleaner, local chores</td>
+                            <td class="py-3 px-4"><span class="badge bg-success">Same-Day / Scheduled</span></td>
+                            <td class="py-3 px-4 text-primary-accent fw-bold">1.0 Credit / hr</td>
+                            <td class="py-3 px-4"><span class="badge border border-secondary" style="background-color: rgba(255, 255, 255, 0.08); color: #F8FAFC; font-weight: 500;">[Placeholder: $25.00/hr]</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-basket-fill text-primary-accent me-2"></i> 2. Grocery & Shopping Assistance</td>
+                            <td class="py-3 px-4">Supermarket runs, farmers market, custom grocery lists</td>
                             <td class="py-3 px-4"><span class="badge bg-success">Daily (Same-Day)</span></td>
-                            <td class="py-3 px-4">ID Verified + Receipt Log</td>
                             <td class="py-3 px-4 text-primary-accent fw-bold">1.0 Credit / hr</td>
+                            <td class="py-3 px-4"><span class="badge border border-secondary" style="background-color: rgba(255, 255, 255, 0.08); color: #F8FAFC; font-weight: 500;">[Placeholder: $25.00/hr]</span></td>
                         </tr>
                         <tr>
-                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-heart-pulse-fill text-primary-accent me-2"></i> Senior Rides & Companionship</td>
-                            <td class="py-3 px-4">Doctor appointments, physical therapy escorts, social visits</td>
-                            <td class="py-3 px-4"><span class="badge bg-success">7 Days a Week</span></td>
-                            <td class="py-3 px-4">Driver Verified + Safe Escort</td>
+                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-arrow-left-right text-primary-accent me-2"></i> 3. Pickup & Drop-off</td>
+                            <td class="py-3 px-4">Item transport, dry cleaning, peer-to-peer handoffs, donations</td>
+                            <td class="py-3 px-4"><span class="badge bg-primary">Within 2–4 Hours</span></td>
+                            <td class="py-3 px-4 text-primary-accent fw-bold">1.0 Credit / hr</td>
+                            <td class="py-3 px-4"><span class="badge border border-secondary" style="background-color: rgba(255, 255, 255, 0.08); color: #F8FAFC; font-weight: 500;">[Placeholder: $25.00/hr]</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-arrow-repeat text-primary-accent me-2"></i> 4. Returns & Exchanges</td>
+                            <td class="py-3 px-4">UPS/FedEx/USPS drop-offs, store returns, receipt logging</td>
+                            <td class="py-3 px-4"><span class="badge bg-success">Daily Flexible</span></td>
+                            <td class="py-3 px-4 text-primary-accent fw-bold">1.0 Credit / trip</td>
+                            <td class="py-3 px-4"><span class="badge border border-secondary" style="background-color: rgba(255, 255, 255, 0.08); color: #F8FAFC; font-weight: 500;">[Placeholder: $20.00/trip]</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-capsule text-primary-accent me-2"></i> 5. Prescription & Pharmacy Pickup</td>
+                            <td class="py-3 px-4">Authorized prescription refills, OTC medicine, medical supplies</td>
+                            <td class="py-3 px-4"><span class="badge bg-success">Priority 1–2 Hours</span></td>
+                            <td class="py-3 px-4 text-primary-accent fw-bold">1.0 Credit / hr</td>
+                            <td class="py-3 px-4"><span class="badge border border-secondary" style="background-color: rgba(255, 255, 255, 0.08); color: #F8FAFC; font-weight: 500;">[Placeholder: $25.00/hr]</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-file-earmark-text-fill text-primary-accent me-2"></i> 6. Document & Package Delivery</td>
+                            <td class="py-3 px-4">Confidential contracts, legal filings, parcels with signature</td>
+                            <td class="py-3 px-4"><span class="badge bg-danger">Direct Courier</span></td>
                             <td class="py-3 px-4 text-primary-accent fw-bold">1.5 Credits / hr</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-house-check-fill text-primary-accent me-2"></i> Home Organization & Tasks</td>
-                            <td class="py-3 px-4">Pantry organizing, closet sorting, donation drop-offs</td>
-                            <td class="py-3 px-4"><span class="badge bg-primary">Weekdays & Weekends</span></td>
-                            <td class="py-3 px-4">Community Reference Checked</td>
-                            <td class="py-3 px-4 text-primary-accent fw-bold">2.0 Credits / task</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-emoji-smile-fill text-primary-accent me-2"></i> Pet Care & Midday Walks</td>
-                            <td class="py-3 px-4">Dog walking, cat sitting, vet drop-offs, plant watering</td>
-                            <td class="py-3 px-4"><span class="badge bg-success">Flexible Schedule</span></td>
-                            <td class="py-3 px-4">Pet-Lover Verified</td>
-                            <td class="py-3 px-4 text-primary-accent fw-bold">1.0 Credit / hr</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-laptop text-primary-accent me-2"></i> Tech Help & Digital Concierge</td>
-                            <td class="py-3 px-4">Smartphone setup, printer troubleshooting, video calling support</td>
-                            <td class="py-3 px-4"><span class="badge bg-primary">Remote & In-Person</span></td>
-                            <td class="py-3 px-4">Tech-Skill Verified</td>
-                            <td class="py-3 px-4 text-primary-accent fw-bold">1.0 Credit / hr</td>
+                            <td class="py-3 px-4"><span class="badge border border-secondary" style="background-color: rgba(255, 255, 255, 0.08); color: #F8FAFC; font-weight: 500;">[Placeholder: $35.00/hr]</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </div>
-    </section>
-
-    <!-- UNIQUE SECTION 2 (SERVICES): POPULAR CONCIERGE SPECIALTIES -->
-    <section class="py-5">
-        <div class="container py-5">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-5 fade-up">
-                    <span class="eyebrow-label">PERSONALIZED CARE</span>
-                    <h2 class="display-6 mt-1 mb-3">Tailored Personal Concierge Packages</h2>
-                    <p class="text-secondary mb-4">Need ongoing support for recovering from surgery, caring for aging parents, or managing a chaotic family schedule? Discover our cooperative concierge specialties.</p>
-                    <a href="contact.html" class="btn btn-primary-orange py-3 px-4 fw-bold">Request Custom Assistance</a>
-                </div>
-
-                <div class="col-lg-7 fade-up" style="transition-delay: 0.1s;">
-                    <div class="row g-4">
-                        <div class="col-sm-6">
-                            <div class="glass-card p-4 h-100">
-                                <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-3 mb-3"><i class="bi bi-bandaid"></i></div>
-                                <h5>Post-Op & Recovery Care</h5>
-                                <p class="text-secondary small mb-0">Meal delivery, prescription pickups, and light home upkeep while recovering at home.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="glass-card p-4 h-100">
-                                <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-3 mb-3"><i class="bi bi-calendar2-check"></i></div>
-                                <h5>Weekly Errand Buddy</h5>
-                                <p class="text-secondary small mb-0">Scheduled weekly grocery runs and dry cleaning drop-offs with the same trusted neighbor.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="glass-card p-4 h-100">
-                                <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-3 mb-3"><i class="bi bi-box2-heart"></i></div>
-                                <h5>Move-In & De-clutter Help</h5>
-                                <p class="text-secondary small mb-0">Box un-packing, furniture assembly assistance, and goodwill haul drop-offs.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="glass-card p-4 h-100">
-                                <div class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-3 mb-3"><i class="bi bi-chat-square-heart"></i></div>
-                                <h5>Senior Social Calls</h5>
-                                <p class="text-secondary small mb-0">Warm weekly check-ins, walks in the neighborhood park, and friendly conversation.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="mt-3 p-3 bg-primary-dark rounded border border-secondary text-secondary small text-center">
+                <i class="bi bi-info-circle-fill text-primary-accent me-1"></i>
+                <strong>Pricing Policy Note:</strong> Taskly operates as a mutual-aid cooperative where 1 volunteer hour equals 1 time credit. Dollar figures are clearly marked placeholders for commercial concierge requests or non-member bookings.
             </div>
         </div>
     </section>
 
-    <!-- UNIQUE SECTION 3 (SERVICES): TIME BANKING RULES & GUIDELINES -->
-    <section class="py-5 bg-secondary-dark border-top border-secondary">
-        <div class="container py-5">
+    <!-- SECTION 8: FREQUENTLY ASKED QUESTIONS (FAQ) -->
+    <section class="py-5" id="faq">
+        <div class="container py-4">
             <div class="text-center mb-5 fade-up">
-                <span class="eyebrow-label">EXCHANGE ETHICS</span>
-                <h2 class="display-6 mt-1">The 4 Golden Rules of Taskly Exchange</h2>
+                <span class="eyebrow-label">COMMUNITY KNOWLEDGE BASE</span>
+                <h2 class="display-6 mt-1">8. Frequently Asked Questions (FAQ)</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">Get quick answers to the most common questions regarding our errand services, booking processes, safety measures, and pricing.</p>
             </div>
 
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 fade-up">
-                    <div class="glass-card p-4 text-center h-100">
-                        <span class="badge bg-secondary text-primary-accent mb-3">RULE 1</span>
-                        <h4>Equality of Hours</h4>
-                        <p class="text-secondary small mb-3">One hour of assistance always equals one time credit, no exceptions.</p>
-                        <h5 class="text-primary-accent mb-0">Fair & Dignified</h5>
-                    </div>
-                </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 fade-up">
+                    <div class="accordion accordion-glass" id="servicesFaqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                    <i class="bi bi-question-circle text-primary-accent me-2"></i> How do I book an errand running service through Taskly?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#servicesFaqAccordion">
+                                <div class="accordion-body">
+                                    Booking is simple! Log in to your member dashboard, select the errand category you need (such as Grocery Shopping, Pickup & Drop-off, or Pharmacy collection), specify your pickup and delivery locations with your timing preferences, and submit the request. Nearby verified runners receive your task alert and accept it within minutes. You can communicate directly through our secure in-app chat throughout the errand.
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.1s;">
-                    <div class="glass-card p-4 text-center h-100">
-                        <span class="badge bg-secondary text-primary-accent mb-3">RULE 2</span>
-                        <h4>Prompt Punctuality</h4>
-                        <p class="text-secondary small mb-3">Communicate arrival times clearly and notify in advance of any schedule changes.</p>
-                        <h5 class="text-primary-accent mb-0">Reliable Care</h5>
-                    </div>
-                </div>
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                    <i class="bi bi-basket text-primary-accent me-2"></i> How does Grocery & Shopping Assistance handle item lists and payment?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#servicesFaqAccordion">
+                                <div class="accordion-body">
+                                    You can provide your shopping list with preferred brands, quantities, and dietary specifications through our dashboard. For purchases, members either prepay stores for curbside collection or provide funds through our secure escrow checkout. When in-store, your runner can message photos for item substitution approvals and will always provide a photo of the itemized receipt upon delivery.
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.2s;">
-                    <div class="glass-card p-4 text-center h-100">
-                        <span class="badge bg-secondary text-primary-accent mb-3">RULE 3</span>
-                        <h4>Respect & Privacy</h4>
-                        <p class="text-secondary small mb-3">Honor neighbor privacy and personal boundaries during every in-home task.</p>
-                        <h5 class="text-primary-accent mb-0">Total Discretion</h5>
-                    </div>
-                </div>
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                    <i class="bi bi-arrow-left-right text-primary-accent me-2"></i> Can errand runners pick up and drop off items across multiple locations?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#servicesFaqAccordion">
+                                <div class="accordion-body">
+                                    Yes! Multi-stop errands are fully supported under our Express & Multi-Stop Dispatch tier. For example, a runner can pick up your dry cleaning, stop by the post office, and grab a bakery order in a single coordinated route. Simply list your stops in the preferred order when posting the errand.
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.3s;">
-                    <div class="glass-card p-4 text-center h-100">
-                        <span class="badge bg-secondary text-primary-accent mb-3">RULE 4</span>
-                        <h4>Reciprocity</h4>
-                        <p class="text-secondary small mb-3">Both offering help and asking for help keep the time bank vibrant and healthy.</p>
-                        <h5 class="text-primary-accent mb-0">Mutual Support</h5>
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                                    <i class="bi bi-arrow-repeat text-primary-accent me-2"></i> How do Returns & Exchanges work with store receipts and shipping labels?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#servicesFaqAccordion">
+                                <div class="accordion-body">
+                                    For prepaid courier returns (UPS, FedEx, USPS, Amazon), you can attach the digital QR code or tape the printed label to your packaged parcel. For in-store merchandise returns or size exchanges, your runner will take your original store receipt and exchange instructions, process the counter transaction, and immediately upload a photo of the return confirmation slip to your dashboard.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                                    <i class="bi bi-capsule text-primary-accent me-2"></i> Are Prescription & Pharmacy Pickups safe, legal, and confidential?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#servicesFaqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely. Prescription pickups follow all state and pharmacy compliance rules. You notify your pharmacy that an authorized Taskly representative is picking up your prepared medication. All medications remain sealed in tamper-evident pharmacy packaging, handled with strict confidentiality, and delivered directly to you with prompt delivery confirmation.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseSix" aria-expanded="false" aria-controls="faqCollapseSix">
+                                    <i class="bi bi-file-earmark-check text-primary-accent me-2"></i> What security measures exist for Document & Package Delivery?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseSix" class="accordion-collapse collapse" aria-labelledby="faqHeadingSix" data-bs-parent="#servicesFaqAccordion">
+                                <div class="accordion-body">
+                                    Document deliveries are handled exclusively by top-rated, ID-verified runners. The courier travels directly from the pickup point to the delivery address without unmonitored stops. Recipients must provide a digital signature or one-time confirmation code to complete the hand-off, ensuring sensitive papers never go missing.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 7 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseSeven" aria-expanded="false" aria-controls="faqCollapseSeven">
+                                    <i class="bi bi-coin text-primary-accent me-2"></i> How does Service Pricing work with time credits and placeholder dollar rates?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseSeven" class="accordion-collapse collapse" aria-labelledby="faqHeadingSeven" data-bs-parent="#servicesFaqAccordion">
+                                <div class="accordion-body">
+                                    Taskly is founded on an equal time bank: 1 hour of volunteer help earned equals 1 time credit to spend on any errand service. For non-credit commercial requests or members wishing to pay directly, commercial rates are listed with clearly marked placeholders (such as [Placeholder: $25.00/hr]), allowing total flexibility whether using reciprocal hours or standard booking.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -248,8 +545,8 @@
     </section>
 
     <!-- UNIQUE SECTION 4 (SERVICES): DIRECT ERRAND POSTING PROMPT -->
-    <section class="py-5">
-        <div class="container py-5">
+    <section class="py-5 bg-secondary-dark border-top border-secondary">
+        <div class="container py-4">
             <div class="glass-card p-4 p-md-5 text-center fade-up">
                 <span class="eyebrow-label">READY TO POST AN ERRAND?</span>
                 <h3 class="mb-3">Have an Errand or Task You Need Done This Week?</h3>

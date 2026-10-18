@@ -42,16 +42,16 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Browse Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Member Stories</a></li>
                     <li class="nav-item"><a class="nav-link active" href="pricing.html">Time Banking</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
                     <a href="dashboard.html" class="btn btn-secondary-custom d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Member Dashboard"><i class="bi bi-grid-1x2"></i></a>
-                    <a href="#" id="rtlToggle" class="btn btn-secondary-custom d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; font-size: 0.8rem;" title="Toggle RTL">RTL</a>
+                    <a href="#" id="rtlToggle" class="btn btn-secondary-custom d-flex align-items-center justify-content-center fw-bold" style="height: 40px; padding: 0 14px; font-size: 0.85rem;" title="Toggle RTL">RTL</a>
                     <a href="#" id="themeToggle" class="btn btn-secondary-custom d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Toggle Theme"><i class="bi bi-sun"></i></a>
-                    <a href="login.html" class="btn btn-primary-orange fw-semibold ms-2">Member Login</a>
+                    <a href="login.html" class="btn btn-primary-orange fw-semibold ms-2" style="height: 40px; padding: 0 1.5rem;">Member Login</a>
                 </div>
             </div>
         </div>
@@ -92,13 +92,75 @@
         </div>
     </section>
 
-    <!-- UNIQUE SECTION 1 (PRICING): INTERACTIVE TIME BANK CALCULATOR -->
-    <section class="py-5 bg-secondary-dark border-top border-secondary">
-        <div class="container py-5">
+    <!-- SECTION: HOW TIME BANKING WORKS (4-STEP CYCLE) -->
+    <section class="py-5" id="how-it-works">
+        <div class="container py-4">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">THE CYCLE OF RECIPROCITY</span>
+                <h2 class="display-6 mt-1">How Time Banking Works in 4 Simple Steps</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">Time banking is a barter-inspired community exchange where 1 hour of help equals 1 time credit—regardless of the service performed. Here is how your hours translate into real help.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Step 1 -->
+                <div class="col-lg-3 col-md-6 fade-up">
+                    <div class="glass-card p-4 h-100 d-flex flex-column text-center position-relative">
+                        <div class="badge bg-secondary text-primary-accent mb-3 align-self-center fs-6 px-3 py-2">STEP 01</div>
+                        <div class="text-primary-accent fs-1 mb-3"><i class="bi bi-person-check-fill"></i></div>
+                        <h4 class="mb-2">Join & Claim Bonus</h4>
+                        <p class="text-secondary small mb-0 flex-grow-1">
+                            Complete your quick member identity check and receive <strong>2.0 Welcome Time Credits</strong> immediately deposited into your digital community wallet.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column text-center position-relative">
+                        <div class="badge bg-secondary text-primary-accent mb-3 align-self-center fs-6 px-3 py-2">STEP 02</div>
+                        <div class="text-primary-accent fs-1 mb-3"><i class="bi bi-hand-thumbs-up-fill"></i></div>
+                        <h4 class="mb-2">Offer Help Nearby</h4>
+                        <p class="text-secondary small mb-0 flex-grow-1">
+                            Browse local requests: grocery shopping, prescription pickup, dog walking, senior companionship, or home organizing chores that fit your schedule.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column text-center position-relative">
+                        <div class="badge bg-secondary text-primary-accent mb-3 align-self-center fs-6 px-3 py-2">STEP 03</div>
+                        <div class="text-primary-accent fs-1 mb-3"><i class="bi bi-piggy-bank-fill"></i></div>
+                        <h4 class="mb-2">Bank Your Credits</h4>
+                        <p class="text-secondary small mb-0 flex-grow-1">
+                            For every hour you spend lending a hand, <strong>1.0 Time Credit</strong> is credited to your balance. Your credits never expire and are backed by the cooperative ledger.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.3s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column text-center position-relative">
+                        <div class="badge bg-secondary text-primary-accent mb-3 align-self-center fs-6 px-3 py-2">STEP 04</div>
+                        <div class="text-primary-accent fs-1 mb-3"><i class="bi bi-gift-fill"></i></div>
+                        <h4 class="mb-2">Redeem for Errands</h4>
+                        <p class="text-secondary small mb-0 flex-grow-1">
+                            When you need grocery delivery, package drop-offs, dry cleaning pickups, or rides, post a task and redeem your credits without spending a single dollar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE TIME BANK CALCULATOR -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary" id="calculator">
+        <div class="container py-4">
             <div class="glass-card p-4 p-md-5">
                 <div class="text-center mb-4 fade-up">
                     <span class="eyebrow-label">RECIPROCAL EXCHANGE CALCULATOR</span>
                     <h2 class="display-6 mt-1">Estimate Your Monthly Errand Freedom</h2>
+                    <p class="text-secondary mx-auto" style="max-width: 600px;">See how a few hours of neighborly volunteering translate into hundreds of dollars saved in concierge and delivery expenses.</p>
                 </div>
 
                 <div class="row align-items-center g-4 fade-up">
@@ -122,20 +184,173 @@
         </div>
     </section>
 
-    <!-- UNIQUE SECTION 2 (PRICING): MEMBERSHIP COMPARISON TABLE -->
+    <!-- SECTION: CORE PRINCIPLES OF TIME BANKING -->
+    <section class="py-5" id="principles">
+        <div class="container py-4">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">ETHICAL FRAMEWORK</span>
+                <h2 class="display-6 mt-1">The 5 Core Principles of Equal Worth</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">Time banking is more than swapping chores—it is a proven social model developed to value human dignity and rebuild genuine community connection.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 fade-up">
+                    <div class="glass-card p-4 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="badge bg-secondary text-primary-accent fs-4 p-2 rounded"><i class="bi bi-people-fill"></i></div>
+                            <h5 class="mb-0">1. We Are All Assets</h5>
+                        </div>
+                        <p class="text-secondary small mb-0">Every human being has meaningful contributions to make. Whether you offer technical support, cook meals, drive a neighbor, or provide friendly conversation, your time has vital worth.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="badge bg-secondary text-primary-accent fs-4 p-2 rounded"><i class="bi bi-hourglass-bottom"></i></div>
+                            <h5 class="mb-0">2. Redefining Real Work</h5>
+                        </div>
+                        <p class="text-secondary small mb-0">Market economies overlook unpaid care, elder support, and neighborliness. Time banking formally recognizes, validates, and rewards these essential social foundations.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="badge bg-secondary text-primary-accent fs-4 p-2 rounded"><i class="bi bi-arrow-repeat"></i></div>
+                            <h5 class="mb-0">3. Reciprocity Beats Charity</h5>
+                        </div>
+                        <p class="text-secondary small mb-0">One-way charity can create dependency and unease. Two-way reciprocity transforms passive recipients into valued givers, establishing equal standing and mutual respect.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 fade-up">
+                    <div class="glass-card p-4 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="badge bg-secondary text-primary-accent fs-4 p-2 rounded"><i class="bi bi-shield-shaded"></i></div>
+                            <h5 class="mb-0">4. Rebuilding Social Capital</h5>
+                        </div>
+                        <p class="text-secondary small mb-0">Strong neighborhoods are built on trust and shared networks. By connecting neighbors directly, time banking weaves a resilient safety net that protects communities in times of crisis.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="badge bg-secondary text-primary-accent fs-4 p-2 rounded"><i class="bi bi-award-fill"></i></div>
+                            <h5 class="mb-0">5. Respect & Equal Parity</h5>
+                        </div>
+                        <p class="text-secondary small mb-0">An hour is an hour. The hour an attorney spends giving legal guidance carries the exact same time credit as the hour a retiree spends weeding a garden or delivering groceries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: COMPLETE BENEFITS OF TIME BANKING -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary" id="benefits">
+        <div class="container py-4">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">TRANSFORMATIVE ADVANTAGES</span>
+                <h2 class="display-6 mt-1">Real Benefits for Real Lives</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">Time banking delivers practical economic relief, health advantages, and social connections across every segment of our neighborhood.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Benefit 1: Households -->
+                <div class="col-lg-6 fade-up">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="badge bg-secondary text-primary-accent fs-4 p-3 rounded"><i class="bi bi-cash-coin"></i></div>
+                            <span class="badge border border-secondary" style="background-color: var(--secondary-bg); color: var(--primary-accent); font-weight: 600;">SAVE $250 - $600 / MO</span>
+                        </div>
+                        <h4 class="mb-2">For Busy Families & Working Adults</h4>
+                        <p class="text-secondary small mb-3">
+                            Escape the high costs of commercial concierge apps and delivery subscriptions. Exchange weekend DIY help or dog walking to get weekday grocery shopping, prescription pickups, and laundry runs done effortlessly.
+                        </p>
+                        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mt-auto border-top border-secondary pt-3">
+                            <li><i class="bi bi-check2 text-primary-accent me-2"></i> Free up 8–15 hours of family time each month</li>
+                            <li><i class="bi bi-check2 text-primary-accent me-2"></i> Zero monthly membership fees or service surcharges</li>
+                            <li><i class="bi bi-check2 text-primary-accent me-2"></i> Access trusted neighborhood help when life gets hectic</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Benefit 2: Seniors -->
+                <div class="col-lg-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="badge bg-secondary text-primary-accent fs-4 p-3 rounded"><i class="bi bi-heart-pulse-fill"></i></div>
+                            <span class="badge border border-secondary" style="background-color: var(--secondary-bg); color: var(--primary-accent); font-weight: 600;">INDEPENDENT AGING</span>
+                        </div>
+                        <h4 class="mb-2">For Older Adults & Aging in Place</h4>
+                        <p class="text-secondary small mb-3">
+                            Maintain dignified independence in the comfort of your own home. Seniors can trade wisdom, storytelling, knitting, or light gardening advice in exchange for rides to clinic appointments and heavy lifting.
+                        </p>
+                        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mt-auto border-top border-secondary pt-3">
+                            <li><i class="bi bi-check2 text-primary-accent me-2"></i> Combats social isolation through meaningful intergenerational friendships</li>
+                            <li><i class="bi bi-check2 text-primary-accent me-2"></i> Dependable rides, prescription delivery, and tech troubleshooting</li>
+                            <li><i class="bi bi-check2 text-primary-accent me-2"></i> Retain autonomy without burdening family or burning savings</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Benefit 3: Students & Career -->
+                <div class="col-lg-6 fade-up">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="badge bg-secondary text-primary-accent fs-4 p-3 rounded"><i class="bi bi-mortarboard-fill"></i></div>
+                            <span class="badge border border-secondary" style="background-color: var(--secondary-bg); color: var(--primary-accent); font-weight: 600;">SKILL SHARING</span>
+                        </div>
+                        <h4 class="mb-2">For Students & Young Professionals</h4>
+                        <p class="text-secondary small mb-3">
+                            Trade digital expertise, social media help, or tech support for home-cooked meals, vehicle maintenance advice, career mentorship, or moving help from experienced neighbors.
+                        </p>
+                        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mt-auto border-top border-secondary pt-3">
+                            <li><i class="bi bi-check2 text-primary-accent me-2"></i> Earn verified community service hours & personal references</li>
+                            <li><i class="bi bi-check2 text-primary-accent me-2"></i> Learn practical life skills (cooking, carpentry, gardening, taxes)</li>
+                            <li><i class="bi bi-check2 text-primary-accent me-2"></i> Establish strong professional and local neighborhood roots</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Benefit 4: Neighborhood Resilience -->
+                <div class="col-lg-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="badge bg-secondary text-primary-accent fs-4 p-3 rounded"><i class="bi bi-geo-alt-fill"></i></div>
+                            <span class="badge border border-secondary" style="background-color: var(--secondary-bg); color: var(--primary-accent); font-weight: 600;">LOCAL RESILIENCE</span>
+                        </div>
+                        <h4 class="mb-2">For Neighborhoods & Local Ecosystems</h4>
+                        <p class="text-secondary small mb-3">
+                            Keep community wealth local. By matching neighbor needs with nearby neighbors, time banking reduces car trips, lowers carbon footprints, and builds a swift emergency response network.
+                        </p>
+                        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mt-auto border-top border-secondary pt-3">
+                            <li><i class="bi bi-check2 text-primary-accent me-2"></i> Rapid mutual-aid coordination during severe weather or emergencies</li>
+                            <li><i class="bi bi-check2 text-primary-accent me-2"></i> Increased neighborhood safety through active, connected streets</li>
+                            <li><i class="bi bi-check2 text-primary-accent me-2"></i> Fosters vibrant cross-cultural and intergenerational understanding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: MEMBERSHIP TIERS COMPARISON -->
     <section class="py-5" id="matrix">
-        <div class="container py-5">
+        <div class="container py-4">
             <div class="text-center mb-5 fade-up">
                 <span class="eyebrow-label">MEMBERSHIP TIERS</span>
                 <h2 class="display-6 mt-1">Community Member vs. Cooperative Sustainer</h2>
+                <p class="text-secondary mx-auto" style="max-width: 600px;">Taskly is 100% free forever for all reciprocal time exchangers. Sustainer memberships are completely optional and help fund our community pool.</p>
             </div>
 
             <div class="table-responsive fade-up">
                 <table class="table table-dark table-hover border border-secondary rounded align-middle">
                     <thead>
-                        <tr class="bg-primary-dark">
-                            <th class="py-3 px-4 text-white">Cooperative Benefits</th>
-                            <th class="py-3 px-4 text-center text-white">Community Member ($0 / Free Forever)</th>
+                        <tr class="border-bottom border-secondary" style="background-color: rgba(13, 148, 136, 0.15);">
+                            <th class="py-3 px-4 text-primary-accent">Cooperative Benefits</th>
+                            <th class="py-3 px-4 text-center text-primary-accent">Community Member ($0 / Free Forever)</th>
                             <th class="py-3 px-4 text-center text-primary-accent">Cooperative Sustainer (Optional $5/mo Donation)</th>
                         </tr>
                     </thead>
@@ -171,12 +386,13 @@
         </div>
     </section>
 
-    <!-- UNIQUE SECTION 3 (PRICING): ETHICAL TIME BANKING SECURITY -->
+    <!-- SECTION: ETHICAL TIME BANKING SECURITY -->
     <section class="py-5 bg-secondary-dark border-top border-secondary">
-        <div class="container py-5">
+        <div class="container py-4">
             <div class="text-center mb-5 fade-up">
                 <span class="eyebrow-label">COOPERATIVE INTEGRITY</span>
                 <h2 class="display-6 mt-1">Guaranteed Fairness & Ledger Transparency</h2>
+                <p class="text-secondary mx-auto" style="max-width: 600px;">Every hour contributed is protected by cooperative rules and immutable digital accounting.</p>
             </div>
 
             <div class="row g-4">
@@ -184,7 +400,7 @@
                     <div class="glass-card p-4 text-center h-100">
                         <div class="text-primary-accent fs-1 mb-3"><i class="bi bi-journal-check"></i></div>
                         <h4>Public Mutual Ledger</h4>
-                        <p class="text-secondary small mb-0">All time credit transfers are logged transparently on our decentralized member ledger to ensure trust.</p>
+                        <p class="text-secondary small mb-0">All time credit transfers are logged transparently on our member ledger to ensure complete accountability.</p>
                     </div>
                 </div>
 
@@ -192,7 +408,7 @@
                     <div class="glass-card p-4 text-center h-100">
                         <div class="text-primary-accent fs-1 mb-3"><i class="bi bi-shield-lock-fill"></i></div>
                         <h4>No Expiration Dates</h4>
-                        <p class="text-secondary small mb-0">Your earned time credits never expire. Save hours today and redeem them months later when you need help.</p>
+                        <p class="text-secondary small mb-0">Your earned time credits never expire. Save hours today and redeem them months later whenever you need help.</p>
                     </div>
                 </div>
 
@@ -200,8 +416,124 @@
                     <div class="glass-card p-4 text-center h-100">
                         <div class="text-primary-accent fs-1 mb-3"><i class="bi bi-heart-fill"></i></div>
                         <h4>Community Time Pool</h4>
-                        <p class="text-secondary small mb-0">Members can donate surplus time credits to our elderly & disabled assistance fund for neighbors in need.</p>
+                        <p class="text-secondary small mb-0">Members can donate surplus time credits to our elderly & disabled assistance fund for neighbors facing emergencies.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TIME BANKING FAQ -->
+    <section class="py-5" id="time-bank-faq">
+        <div class="container py-4">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">CLARITY & COMPLIANCE</span>
+                <h2 class="display-6 mt-1">Frequently Asked Questions</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">Clear answers to common questions about time banking legality, credit balances, task safety, and community guidelines.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10 fade-up">
+                    <div class="accordion accordion-glass" id="pricingFaqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="tbFaqHeadOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tbFaqCollapseOne" aria-expanded="true" aria-controls="tbFaqCollapseOne">
+                                    <i class="bi bi-question-circle text-primary-accent me-2"></i> Why is 1 hour of any service valued equally to 1 hour of another?
+                                </button>
+                            </h2>
+                            <div id="tbFaqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="tbFaqHeadOne" data-bs-parent="#pricingFaqAccordion">
+                                <div class="accordion-body">
+                                    Traditional markets assign dollar values based on scarcity and financial leverage, often undervaluing vital care, companionship, and everyday assistance. In time banking, everyone’s fundamental human time is treated as having equal intrinsic dignity. One hour spent helping a neighbor with groceries has the exact same value as one hour spent setting up a computer. This fundamental parity removes socioeconomic barriers and makes everyone an equal partner.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="tbFaqHeadTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tbFaqCollapseTwo" aria-expanded="false" aria-controls="tbFaqCollapseTwo">
+                                    <i class="bi bi-wallet2 text-primary-accent me-2"></i> Can I request an errand if my credit balance is zero or negative?
+                                </button>
+                            </h2>
+                            <div id="tbFaqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="tbFaqHeadTwo" data-bs-parent="#pricingFaqAccordion">
+                                <div class="accordion-body">
+                                    Yes! All new members receive 2.0 Welcome Time Credits upon profile approval so you can request help immediately. Additionally, Taskly permits members to carry a reasonable temporary negative credit balance (up to -4.0 hours) or draw from our Community Time Pool, ensuring no neighbor is ever denied urgent help during an illness, injury, or family crisis.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="tbFaqHeadThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tbFaqCollapseThree" aria-expanded="false" aria-controls="tbFaqCollapseThree">
+                                    <i class="bi bi-file-earmark-check text-primary-accent me-2"></i> Are time banking hours considered taxable income?
+                                </button>
+                            </h2>
+                            <div id="tbFaqCollapseThree" class="accordion-collapse collapse" aria-labelledby="tbFaqHeadThree" data-bs-parent="#pricingFaqAccordion">
+                                <div class="accordion-body">
+                                    In the United States and most jurisdictions, reciprocal community time banking exchanges are explicitly recognized as non-commercial, non-taxable neighborly mutual aid (supported by IRS Private Letter Ruling 97-22002). Because credits cannot be redeemed for cash or traded for market goods, they are non-monetary and not subject to income tax.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="tbFaqHeadFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tbFaqCollapseFour" aria-expanded="false" aria-controls="tbFaqCollapseFour">
+                                    <i class="bi bi-shield-check text-primary-accent me-2"></i> How does Taskly ensure safety, trust, and accountability?
+                                </button>
+                            </h2>
+                            <div id="tbFaqCollapseFour" class="accordion-collapse collapse" aria-labelledby="tbFaqHeadFour" data-bs-parent="#pricingFaqAccordion">
+                                <div class="accordion-body">
+                                    Community safety is our primary pillar. Every member undergoes identity verification and signs our Community Code of Conduct. Tasks are arranged via secure in-app messaging, verified via GPS and receipt uploads, and followed by two-way member ratings. Coordinators actively monitor task feedback and intervene immediately if any safety concern arises.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="tbFaqHeadFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tbFaqCollapseFive" aria-expanded="false" aria-controls="tbFaqCollapseFive">
+                                    <i class="bi bi-building text-primary-accent me-2"></i> Can local non-profits, churches, or organizations join?
+                                </button>
+                            </h2>
+                            <div id="tbFaqCollapseFive" class="accordion-collapse collapse" aria-labelledby="tbFaqHeadFive" data-bs-parent="#pricingFaqAccordion">
+                                <div class="accordion-body">
+                                    Yes! Community organizations, local food pantries, libraries, senior centers, and non-profits can create institutional profiles. Organizations earn time credits by hosting volunteer workdays, workshops, or group drives, and can disburse their earned credits to community members in need.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="tbFaqHeadSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tbFaqCollapseSix" aria-expanded="false" aria-controls="tbFaqCollapseSix">
+                                    <i class="bi bi-hourglass-split text-primary-accent me-2"></i> What if a task takes slightly more or less time than expected?
+                                </button>
+                            </h2>
+                            <div id="tbFaqCollapseSix" class="accordion-collapse collapse" aria-labelledby="tbFaqHeadSix" data-bs-parent="#pricingFaqAccordion">
+                                <div class="accordion-body">
+                                    Time transfers are logged in 15-minute (0.25 credit) increments based on actual errand duration. When completing a task, both the helper and the requester confirm the logged hours in their dashboard. If an errand takes 1 hour and 30 minutes, 1.5 credits are transferred upon mutual sign-off.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TIME BANK CALL TO ACTION -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary">
+        <div class="container py-4">
+            <div class="glass-card p-4 p-md-5 text-center fade-up">
+                <span class="eyebrow-label">READY TO EXCHANGE TIME?</span>
+                <h3 class="mb-3">Open Your Free Community Time Bank Account</h3>
+                <p class="text-secondary mx-auto mb-4" style="max-width: 620px;">Join hundreds of neighbors already exchanging errand runs, senior care, and home assistance. No dollars needed—claim your 2.0 welcome credits today.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="register.html" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold"><i class="bi bi-person-plus-fill me-1"></i> Register Free & Claim 2.0 Credits</a>
+                    <a href="services.html" class="btn btn-secondary-custom btn-lg px-4 py-3 fw-bold">Explore Available Services</a>
                 </div>
             </div>
         </div>

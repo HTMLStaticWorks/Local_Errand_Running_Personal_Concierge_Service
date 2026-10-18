@@ -35,15 +35,15 @@
     --primary-bg: #0B1120;
     --secondary-bg: #131E32;
     --card-bg: #131E32;
-    --primary-accent: #10B981;
-    --primary-accent-hover: #059669;
+    --primary-accent: #0D9488;
+    --primary-accent-hover: #0F766E;
     --deep-black: #080D1A;
     --pure-white: #FFFFFF;
     --text-primary: #F8FAFC;
     --text-secondary: #94A3B8;
     --border-color: #1E293B;
     --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    --glow-color: rgba(16, 185, 129, 0.25);
+    --glow-color: rgba(13, 148, 136, 0.25);
     --navbar-bg: rgba(11, 17, 32, 0.92);
     --sidebar-bg: rgba(19, 30, 50, 0.95);
 }
@@ -240,6 +240,51 @@ a:hover {
     padding: 0.4rem 0.6rem;
     border-radius: 8px;
     color: var(--text-primary) !important;
+}
+
+/* Header Controls Consistency (Theme, RTL, and Primary CTA) */
+.navbar-glass .btn-secondary-custom,
+.navbar-glass #rtlToggle,
+.navbar-glass #themeToggle,
+.navbar-glass a[href="dashboard.html"],
+.navbar-glass .btn-primary-orange,
+.navbar-glass a[href="login.html"],
+.auth-top-controls #rtlToggle,
+.auth-top-controls #themeToggle {
+    height: 40px !important;
+    border-radius: var(--radius-btn) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    line-height: 1;
+}
+
+.navbar-glass #themeToggle,
+.navbar-glass a[href="dashboard.html"],
+.auth-top-controls #themeToggle {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    flex-shrink: 0;
+}
+
+.navbar-glass #rtlToggle,
+.auth-top-controls #rtlToggle {
+    height: 40px !important;
+    min-width: 40px;
+    padding: 0 14px !important;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.navbar-glass .btn-primary-orange,
+.navbar-glass a[href="login.html"] {
+    height: 40px !important;
+    padding: 0 1.5rem !important;
+    font-size: 0.95rem;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 /* Buttons — Primary & Secondary Accent */
@@ -462,6 +507,19 @@ a:hover {
     padding: 5rem 0 4rem;
     display: flex;
     align-items: center;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .hero-creative-workshop,
+    .hero-design-journey,
+    .hero-editorial-about,
+    .hero-service-orbit,
+    .hero-blog-magazine,
+    .hero-pricing-stacked,
+    .hero-contact-collab {
+        min-height: 680px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -472,7 +530,7 @@ a:hover {
     .hero-blog-magazine,
     .hero-pricing-stacked,
     .hero-contact-collab {
-        min-height: 80vh;
+        min-height: 700px;
     }
 }
 
@@ -681,7 +739,7 @@ a:hover {
 
 .accordion-glass .accordion-button:not(.collapsed) {
     color: var(--primary-accent);
-    background: rgba(16, 185, 129, 0.06);
+    background: rgba(13, 148, 136, 0.08);
 }
 
 .accordion-glass .accordion-body {
@@ -818,9 +876,9 @@ a:hover {
 
 /* Glass Card Badges styling for high contrast in all themes */
 .glass-card .badge.bg-secondary {
-    background-color: rgba(16, 185, 129, 0.12) !important;
+    background-color: rgba(13, 148, 136, 0.12) !important;
     color: var(--primary-accent) !important;
-    border: 1px solid rgba(16, 185, 129, 0.25) !important;
+    border: 1px solid rgba(13, 148, 136, 0.25) !important;
 }
 
 /* Responsive Overrides */
@@ -887,7 +945,7 @@ a:hover {
     --bs-table-bg: transparent !important;
     --bs-table-color: var(--text-primary) !important;
     --bs-table-hover-color: var(--text-primary) !important;
-    --bs-table-hover-bg: rgba(16, 185, 129, 0.08) !important;
+    --bs-table-hover-bg: rgba(13, 148, 136, 0.08) !important;
 }
 
 .table-theme th, .table-theme td {
@@ -902,7 +960,7 @@ a:hover {
 }
 
 .table-theme.table-hover tbody tr:hover {
-    background-color: rgba(16, 185, 129, 0.05) !important;
+    background-color: rgba(13, 148, 136, 0.05) !important;
 }
 
 /* Custom Form Checkbox Styling */
