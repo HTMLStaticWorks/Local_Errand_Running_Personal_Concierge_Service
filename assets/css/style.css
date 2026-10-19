@@ -371,6 +371,11 @@ a:hover {
     transform: translateY(-2px);
 }
 
+.btn-secondary-custom .bi-apple {
+    color: currentColor;
+    transition: color 0.25s ease;
+}
+
 /* Cards & Product Cards System */
 .glass-card {
     background: var(--card-bg);
