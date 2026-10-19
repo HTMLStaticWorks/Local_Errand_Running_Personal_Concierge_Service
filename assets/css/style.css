@@ -210,11 +210,12 @@ a:hover {
     transition: color 0.25s ease;
 }
 
-.nav-link:hover, .nav-link.active {
+.navbar-nav .nav-link:hover, 
+.navbar-nav .nav-link.active {
     color: var(--primary-accent) !important;
 }
 
-.nav-link::after {
+.navbar-nav .nav-link::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -227,13 +228,47 @@ a:hover {
     border-radius: 2px;
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.navbar-nav .nav-link:hover::after, 
+.navbar-nav .nav-link.active::after {
     width: 70%;
 }
 
+/* Dashboard Sidebar Navigation - Single Consistent Active-State Style */
+#sidebar .nav-link,
+#dashboardTabs .nav-link {
+    font-family: var(--font-body);
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+    border-radius: var(--radius-btn);
+    transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    border: none;
+    background: transparent;
+}
+
+#sidebar .nav-link::after,
+#dashboardTabs .nav-link::after {
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+#sidebar .nav-link:hover,
+#dashboardTabs .nav-link:hover {
+    color: var(--primary-accent) !important;
+    background-color: rgba(13, 148, 136, 0.12) !important;
+}
+
+#sidebar .nav-link.active,
+#dashboardTabs .nav-link.active,
 .nav-pills .nav-link.active {
     color: #FFFFFF !important;
     background-color: var(--primary-accent) !important;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
 }
 
 .navbar-toggler {
